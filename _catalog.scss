@@ -1,0 +1,387 @@
+.top-content {
+
+    &_catalog {
+        height: 400px;
+        background-image: url(img/catalog__header.jpeg);
+    }
+
+    &__heading_catalog {
+        margin-top: 127px;
+    }
+
+}
+
+.product-box {
+
+    &__menu {
+        margin-top: 64px;
+        margin-bottom: 61px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    &__filter {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    &__select {
+        font: inherit;
+        color: $black;
+        @extend %filter-heading-font;
+        appearance: none;
+        background-color: transparent;
+        box-sizing: border-box;
+        padding-top: 9px;
+        padding-bottom: 11px;
+        padding-left: 23px;
+        padding-right: 56px;
+        border: 1px solid $gray;
+        border-radius: 20px;
+        background-image: url(img/arrow_black.svg);
+        background-repeat: no-repeat;
+        background-position: right 22px center;
+    }
+
+    &__select:hover {
+        background: $black;
+        color: $white;
+        transition: all 0.5s;
+        background-image: url(img/arrow_white.svg);
+        background-repeat: no-repeat;
+        background-position: right 22px center;
+    }
+
+    &__top-bar {
+        color: $black;
+        font-size: 1em;
+        font-weight: 400;
+        line-height: 32px;
+        letter-spacing: 0%;
+        text-decoration-line: none;
+    }
+
+    &__top-bar:hover {
+        color: $gray;
+        text-decoration-line: underline;
+        transition: all 0.5s;
+    }
+
+}
+
+.filtering-form {
+    z-index: 10;
+    position: absolute;
+    top: calc(100% + 14px);
+    right: 0;
+
+    &-wrapper {
+        position: relative;
+    }
+}
+
+.filter {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: start;
+    gap: 32px 65px;
+    height: 548px;
+    width: 542px;
+    font-size: 0.875em;
+    font-weight: 400;
+    line-height: 17px;
+    letter-spacing: 0%;
+    box-sizing: border-box;
+    padding: 40px 48px;
+    box-shadow: 0px 4px 67px -12px $shadow-color;
+    background: $white;
+
+    &__fieldset {
+        border: none;
+    }
+
+    &__fieldset_color {
+        display: flex;
+        flex-wrap: wrap;
+        width: 203px;
+    }
+
+    &__heading {
+        @extend %filter-heading-font;
+        margin-bottom: 14px;
+    }
+
+    &__input {
+        margin-bottom: 14px;
+    }
+
+    &__button {
+        border: 1px solid $black;
+        border-radius: 20px;
+        width: 190px;
+        height: 40px;
+        font: inherit;
+        @extend %form-button-font;
+        background-color: $white;
+    }
+
+    &__button:hover {
+        background: $black;
+        color: $white;
+        transition: all 0.5s;
+    }
+
+    &__button-flex {
+        height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+}
+
+.range {
+    margin-top: 14px;
+    width: 189px;
+    height: 10px;
+    position: relative;
+
+    &__input {
+        width: 189px;
+        height: 10px;
+        overflow: hidden;
+        outline: none;
+    }
+
+    &__input,
+    &__input::-webkit-slider-runnable-track,
+    &__input::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        background: none;
+    }
+
+    &__input::-webkit-slider-runnable-track {
+        width: 189px;
+        height: 1px;
+        background: $black;
+    }
+
+    &__input_min::-webkit-slider-runnable-track {
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+
+    &__input_max::-webkit-slider-runnable-track {
+        background: none;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+
+    &__input::-webkit-slider-thumb {
+        position: relative;
+        width: 8px;
+        height: 8px;
+        margin-top: -4px;
+        border-radius: 50%;
+        background: $black;
+        cursor: pointer;
+    }
+
+    &__input::-webkit-slider-thumb:active {
+        cursor: grabbing;
+    }
+
+    &__input::-moz-range-thumb {
+        position: relative;
+        width: 8px;
+        height: 8px;
+        margin-top: -4px;
+        border-radius: 50%;
+        background: $black;
+        cursor: pointer;
+    }
+
+    &__input::-moz-range-thumb:active {
+        cursor: grabbing;
+    }
+
+}
+
+input {
+    &[type="radio"] {
+        display: none;
+    }
+
+    &[type="radio"]+label {
+        position: relative;
+        padding-left: 29px;
+        cursor: pointer;
+    }
+
+    &[type="radio"]+label::before {
+        content: "";
+        position: absolute;
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        border: 1px solid $gray;
+    }
+
+    &[type="radio"]:checked+label::after {
+        content: "";
+        border: 1px solid $black;
+        border-radius: 50%;
+        position: absolute;
+        left: 0;
+        width: 15px;
+        height: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        background-image: url(img/black-tick.svg);
+        background-repeat: no-repeat;
+        background-position: 4px 4px;
+    }
+
+    &[type="checkbox"] {
+        display: none;
+    }
+
+    &[type="checkbox"]+label {
+        position: relative;
+        padding-left: 29px;
+        cursor: pointer;
+    }
+
+    &[type="checkbox"]+label::before {
+        content: "";
+        position: absolute;
+        width: 15px;
+        height: 15px;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        border: 1px solid $gray;
+    }
+
+    &[type="checkbox"]:checked+label::after {
+        content: "";
+        border: 1px solid $black;
+        position: absolute;
+        left: 0;
+        width: 15px;
+        height: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        background-image: url(img/black-tick.svg);
+        background-repeat: no-repeat;
+        background-position: 4px 4px;
+    }
+
+}
+
+.color-options {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    row-gap: 14px;
+
+    &__input[type="checkbox"]+label::before {
+        border: none;
+    }
+
+    &__input_white[type="checkbox"]+label::before {
+        background-color: $white;
+        border: 1px solid $gray;
+    }
+
+    &__input_black[type="checkbox"]+label::before {
+        background-color: $black;
+        border: 1px solid $black;
+    }
+
+    &__input_gray[type="checkbox"]+label::before {
+        background-color: rgb(115, 115, 115);
+        border: 1px solid rgb(115, 115, 115);
+    }
+
+    &__input_red[type="checkbox"]+label::before {
+        background-color: rgb(255, 0, 0);
+        border: 1px solid rgb(255, 0, 0);
+    }
+
+    &__input_orange[type="checkbox"]+label::before {
+        background-color: rgb(255, 122, 65);
+        border: 1px solid rgb(255, 122, 65);
+    }
+
+    &__input_yellow[type="checkbox"]+label::before {
+        background-color: rgb(242, 203, 1);
+        border: 1px solid rgb(242, 203, 1);
+    }
+
+    &__input_green[type="checkbox"]+label::before {
+        background-color: rgb(0, 191, 42);
+        border: 1px solid rgb(0, 191, 42);
+    }
+
+    &__input_teal[type="checkbox"]+label::before {
+        background-color: rgb(28, 204, 151);
+        border: 1px solid rgb(28, 204, 151);
+    }
+
+    &__input_light-blue[type="checkbox"]+label::before {
+        background-color: rgb(0, 159, 227);
+        border: 1px solid rgb(0, 159, 227);
+    }
+
+    &__input_blue[type="checkbox"]+label::before {
+        background-color: rgb(0, 10, 248);
+        border: 1px solid rgb(0, 10, 248);
+    }
+
+    &__input_violet[type="checkbox"]+label::before {
+        background-color: rgb(103, 16, 214);
+        border: 1px solid rgb(103, 16, 214);
+    }
+
+    &__input_purple[type="checkbox"]+label::before {
+        background-color: rgb(157, 13, 181);
+        border: 1px solid rgb(157, 13, 181);
+    }
+
+    &__input_lilac[type="checkbox"]+label::before {
+        background-color: rgb(216, 154, 255);
+        border: 1px solid rgb(216, 154, 255);
+    }
+
+    &__input_pink[type="checkbox"]+label::before {
+        background-color: rgb(255, 101, 166);
+        border: 1px solid rgb(255, 101, 166);
+    }
+
+    .color-options__input_black:checked+label::after,
+    .color-options__input_blue:checked+label::after,
+    .color-options__input_violet:checked+label::after,
+    .color-options__input_purple:checked+label::after {
+        background-image: url(img/white-tick.svg);
+    }
+
+}
+
+.product-content_catalog {
+    row-gap: 48px;
+}
+
+.product-box__link_catalog {
+    margin-top: 32px;
+}

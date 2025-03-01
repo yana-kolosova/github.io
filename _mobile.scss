@@ -1,0 +1,327 @@
+@media (max-width: 767px) {
+    .center {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .header {
+        border: none;
+        height: 57px;
+        padding-top: 32px;
+
+        &__logo {
+            width: 99px;
+        }
+
+        &__input {
+            display: none;
+        }
+
+        &-menu {
+            display: none;
+        }
+
+        &-mobile {
+            display: flex;
+            gap: 32px;
+            align-items: center;
+        }
+    }
+
+    .top-content {
+        background-image: url(img/index__header_mobile.jpeg);
+        background-position: left;
+
+        &_catalog {
+            background-image: url(img/catalog__header_mobile.jpeg);
+            background-position: left;
+        }
+
+        &__heading {
+            font-size: 3em;
+            font-weight: 600;
+            line-height: 59px;
+            letter-spacing: 0%;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        &__heading_catalog {
+            margin-top: 82px;
+        }
+
+        &__text {
+            font-size: 1em;
+            font-weight: 400;
+            line-height: 32px;
+            letter-spacing: 0%;
+            text-align: center;
+        }
+
+        &__link {
+            display: flex;
+            justify-self: center;
+            font-size: 0.875em;
+            font-weight: 400;
+            line-height: 24px;
+            letter-spacing: 0%;
+            text-align: center;
+        }
+
+        &__heading {
+            margin-top: 82px;
+        }
+
+        &_cart {
+            background-image: url(img/cart__header_mobile.jpeg);
+            background-position: right;
+        }
+    }
+
+
+    .for {
+
+        &__heading {
+            font-size: 1.5em;
+            font-weight: 600;
+            line-height: 29px;
+            letter-spacing: 0%;
+            margin-top: 32px;
+        }
+
+        &__content {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            justify-content: center;
+            gap: 16px;
+        }
+
+        &__item {
+            font-size: 1.75em;
+            font-weight: 600;
+            line-height: 34px;
+            letter-spacing: 0%;
+        }
+
+        &__item_1,
+        &__item_2 {
+            height: 345px;
+        }
+
+        &__item_3,
+        &__item_4,
+        &__item_5 {
+            height: 375px;
+        }
+    }
+
+    .product-box {
+
+        &__heading {
+            font-size: 1.5em;
+            font-weight: 600;
+            line-height: 29px;
+            letter-spacing: 0%;
+            margin-top: 32px;
+        }
+
+        &__heading_cart {
+            margin-top: 48px;
+        }
+
+        &__link {
+            margin-top: 32px;
+        }
+
+        &__filter {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .filtering-form-wrapper {
+            order: 2;
+        }
+
+        &__select {
+            order: 1;
+        }
+    }
+
+    .product {
+        &__name {
+            font-size: 1.125em;
+            font-weight: 500;
+            line-height: 22px;
+            letter-spacing: 0%;
+        }
+
+        &__desc {
+            font-size: 0.875em;
+            font-weight: 400;
+            line-height: 17px;
+            letter-spacing: 0%;
+            margin-bottom: 8px;
+        }
+
+        &__price {
+            font-size: 1.125em;
+            font-weight: 500;
+            line-height: 22px;
+            letter-spacing: 0%;
+        }
+
+        &-content {
+            gap: 36px;
+        }
+
+        &-content_catalog {
+            gap: 32px;
+        }
+
+        &-content_cart {
+            gap: 32px;
+        }
+
+        &__name {
+            margin-bottom: 4px;
+        }
+    }
+
+    .footer {
+        margin-top: 32px;
+        padding-bottom: 33px;
+
+        &-info {
+            width: 100%;
+            margin-bottom: 70px;
+        }
+
+        &-info {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            column-gap: 16px;
+        }
+
+        &-menu {
+            grid-column: span 2;
+        }
+
+        &-contacts {
+            grid-column: span 2;
+        }
+
+        &-form {
+            width: 100%;
+            align-items: center;
+        }
+
+        &-content {
+            width: 100%;
+            gap: 0px;
+        }
+
+    }
+
+    .filtering-form {
+        left: 0px;
+    }
+
+    .filter {
+        max-width: 287px;
+        height: 910px;
+        flex-wrap: nowrap;
+
+        &__button-flex {
+            gap: 36px;
+        }
+
+        &__input:last-child {
+            margin: 0px;
+        }
+    }
+
+    .product-box .product-box__menu {
+        margin-top: 32px;
+        margin-bottom: 32px;
+        gap: 14px;
+    }
+
+    .cart {
+        display: block;
+
+        &-form {
+            margin-top: 48px;
+        }
+
+        &-window {
+            display: none;
+        }
+    }
+
+    .cart-content {
+        &__namebox {
+            display: none;
+        }
+
+        &__name {
+            margin-bottom: 8px;
+        }
+
+        &__desc {
+            font-size: 0.875em;
+            font-weight: 400;
+            line-height: 15px;
+            letter-spacing: 0%;
+            margin-bottom: 15px;
+        }
+
+        &__product_first {
+            border-top: 0.5px solid $border-bottom-color;
+        }
+
+        &__product {
+            padding-top: 18px;
+            padding-bottom: 24px;
+        }
+
+        &__img {
+            display: none;
+        }
+
+        &__left {
+            width: 253px;
+            gap: 0px;
+        }
+
+        &__price {
+            font-size: 0.875rem;
+            font-weight: 500;
+            line-height: 15px;
+            letter-spacing: 0%;
+        }
+
+        &__button:last-child {
+            display: none;
+        }
+
+        &__nav-buttons {
+            margin-top: 8px;
+        }
+
+    }
+
+    .special-offers__price {
+        gap: 57px;
+    }
+
+}
+
+@media (max-width: 320px) {
+
+    h1,
+    h2 {
+        word-wrap: break-word;
+    }
+
+}
